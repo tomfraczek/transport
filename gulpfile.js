@@ -18,6 +18,7 @@ var ignore = require('gulp-ignore');
 
 var paths = {
     sass: 'styles/*.scss',
+    ignore: 'styles/_*.scss',
 };
 
 var onError = function(err) {
@@ -34,6 +35,7 @@ function style() {
         .src(paths.sass, {base: "./"})
         .pipe(plumber({errorHandler: onError}))
         .pipe(sourcemaps.init())
+        .pipe(ignore.include(paths.ignore))
         .pipe(sass())
         .pipe(autoprefixer({
             browsers: ['last 2 versions', 'IE 11'],
