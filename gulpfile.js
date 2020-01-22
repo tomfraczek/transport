@@ -35,7 +35,7 @@ function style() {
         .src(paths.sass, {base: "./"})
         .pipe(plumber({errorHandler: onError}))
         .pipe(sourcemaps.init())
-        .pipe(ignore.include(paths.ignore))
+        // .pipe(ignore.include(paths.ignore))
         .pipe(sass())
         .pipe(autoprefixer({
             browsers: ['last 2 versions', 'IE 11'],

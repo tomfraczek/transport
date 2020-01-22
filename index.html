@@ -11,34 +11,46 @@
     <link rel="stylesheet" href="utility/uikit/uikit.min.css">
     <link rel="stylesheet" href="styles/styles.css">
     <script src="utility/uikit/uikit.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+          integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+          crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
+            integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
+            crossorigin=""></script>
+    <script src="js/leaflet-map.js"></script>
 
 </head>
 <body>
 
 <header>
-    <nav>
-        <div class="nav-logo">
-            <img src="./img/truck.svg" alt="">
-            <span>Smorawsky Empire</span>
-        </div>
-        <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Link 1</a></li>
-            <li><a href="#">Link 2</a></li>
-            <li><a href="#">Contact</a></li>
-        </ul>
-    </nav>
+    <div class="container">
+        <nav>
+            <div class="nav-logo">
+                <img src="./img/truck.svg" alt="">
+                <span>Smorawsky Empire</span>
+            </div>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Link 1</a></li>
+                <li><a href="#">Link 2</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
 </header>
 
 <section class="slideshow--main">
-    <div class="slideshaw-fix--top">
-        <img src="./img/phone.svg" alt="">
-        <p>call us: 123 456 789</p>
+
+    <div class="container">
+        <div class="slideshow-fix--top">
+            <img src="./img/phone.svg" alt="">
+            <p>call us: 123 456 789</p>
+        </div>
     </div>
 
-    <div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1" uk-slideshow="autoplay: true; finite: false; autoplay-interval: 6000; pause-on-hover: false; ratio: 7:3">
+    <div class="uk-position-relative uk-visible-toggle uk-light main-slider" tabindex="-1" uk-slideshow="autoplay: true; finite: false; autoplay-interval: 6000; pause-on-hover: false; ratio: 7:3">
 
-        <ul class="uk-slideshow-items">
+        <ul class="uk-slideshow-items slideshow-items">
             <li>
                 <img src="img/slide1.png" alt="" uk-cover>
             </li>
@@ -52,60 +64,234 @@
 
     </div>
 
-    <div class="slideshaw-fix--bottom">
-        <div class="slideshow--bottom__top">
-            <h2>STUNNING 6 BED HOUSE IN THE HEART OF THE CITY</h2>
-            <p>I'm a paragraph. Click here to add your own text and edit me. It’s easy. Just click “Edit Text” or double click me to add your own content and make changes to the font.</p>
-        </div>
+    <img class="mobile-top-img" src="img/slide1.png" alt="">
 
-        <div class="slideshow--bottom__bottom">
-            <h2>$2,000,000</h2>
-            <a href="#">all sales</a>
+    <div class="container">
+        <div class="slideshaw-fix--bottom">
+            <div class="slideshow--bottom__top">
+                <h2>STUNNING 6 BED HOUSE IN THE HEART OF THE CITY</h2>
+                <p>I'm a paragraph. Click here to add your own text and edit me. It’s easy. Just click “Edit Text” or double click me to add your own content and make changes to the font.</p>
+            </div>
+
+            <div class="slideshow--bottom__bottom">
+                <h2>$2,000,000</h2>
+                <a href="#">all sales</a>
+            </div>
         </div>
     </div>
 </section>
 
-<section id="sectionTwo" class="section-two">
-    <h2>LATEST PROPERTIES FOR SALE</h2>
+<div class="container">
+    <section id="sectionTwo" class="section-two">
+        <h2>LATEST PROPERTIES FOR SALE</h2>
 
-    <div class="three-cards">
-        <div class="card card-one">
-            <a href="#">
-                <img src="./img/card1.png" alt="">
-            </a>
+        <div class="three-cards">
+            <div class="card card-one">
+                <a href="#">
+                    <img src="./img/card1.png" alt="">
+                </a>
 
-            <h3>DOWN AVENUE</h3>
-            <p class="card-price">$500,000</p>
-            <p class="card-rooms">4 Bedrooms</p>
-            <p class="card-paragraph">I'm a paragraph. Click here to add your own text and edit me. It’s easy. Just click “Edit Text” or double click me to add your own content and make changes to the font. I’m a great place for you to tell a story and let your users know a little more about you.</p>
-            <a href="#" class="card-read-more">read more</a>
+                <h3 class="header-small">DOWN AVENUE</h3>
+                <p class="card-price">$500,000</p>
+                <p class="card-rooms">4 Bedrooms</p>
+                <p class="card-paragraph">I'm a paragraph. Click here to add your own text and edit me. It’s easy. Just click “Edit Text” or double click me to add your own content and make changes to the font. I’m a great place for you to tell a story and let your users know a little more about you.</p>
+                <a href="#" class="card-read-more">read more</a>
+            </div>
+
+            <div class="card card-two">
+                <a href="#">
+                    <img src="./img/card1.png" alt="">
+                </a>
+
+                <h3 class="header-small">QUEENS WAY</h3>
+                <p class="card-price">$450,000</p>
+                <p class="card-rooms">3 Bedrooms</p>
+                <p class="card-paragraph">I'm a paragraph. Click here to add your own text and edit me. It’s easy. Just click “Edit Text” or double click me to add your own content and make changes to the font. I’m a great place for you to tell a story and let your users know a little more about you.</p>
+                <a href="#" class="card-read-more">read more</a>
+            </div>
+
+            <div class="card card-three">
+                <a href="#">
+                    <img src="./img/card1.png" alt="">
+                </a>
+
+                <h3 class="header-small">RANDALL CLOSE</h3>
+                <p class="card-price">$790,000</p>
+                <p class="card-rooms">6 Bedrooms</p>
+                <p class="card-paragraph">I'm a paragraph. Click here to add your own text and edit me. It’s easy. Just click “Edit Text” or double click me to add your own content and make changes to the font. I’m a great place for you to tell a story and let your users know a little more about you.</p>
+                <a href="#" class="card-read-more">read more</a>
+            </div>
         </div>
+    </section>
+</div>
 
-        <div class="card card-two">
-            <a href="#">
-                <img src="./img/card2.png" alt="">
-            </a>
+<section id="sectionThree" class="section-three">
+    <h2>LATEST PROPERTIES PROPERTIES</h2>
 
-            <h3>QUEENS WAY</h3>
-            <p class="card-price">$450,000</p>
+    <div class="section-three--top section-three--content">
+        <img src="./img/section3.png" alt="">
+
+        <div class="three--top__right card">
+            <h3 class="header-small">QUEENS WAY</h3>
             <p class="card-rooms">3 Bedrooms</p>
             <p class="card-paragraph">I'm a paragraph. Click here to add your own text and edit me. It’s easy. Just click “Edit Text” or double click me to add your own content and make changes to the font. I’m a great place for you to tell a story and let your users know a little more about you.</p>
-            <a href="#" class="card-read-more">read more</a>
+            <p class="card-price">$450,000</p>
+        </div>
+    </div>
+
+    <div class="section-three--bottom section-three--content">
+        <div class="three--bottom__left card">
+            <h3 class="header-small">QUEENS WAY</h3>
+            <p class="card-rooms">3 Bedrooms</p>
+            <p class="card-paragraph">I'm a paragraph. Click here to add your own text and edit me. It’s easy. Just click “Edit Text” or double click me to add your own content and make changes to the font. I’m a great place for you to tell a story and let your users know a little more about you.</p>
+            <p class="card-price">$450,000</p>
+        </div>
+        <img src="./img/section3.png" alt="">
+    </div>
+
+</section>
+
+<div class="container">
+    <section id="sectionFour" class="section-four">
+        <h2>REALTORS YOU CAN TRUST</h2>
+
+        <div class="four--cards__wrapper">
+            <div class="four--card">
+                <img src="./img/four-icon.png" alt="">
+                <h3>FREE REGISTRATION<br>NO HIDDEN FEES</h3>
+                <p>I'm a paragraph. Click here to add your own text and edit me. Let your users get to know you.</p>
+            </div>
+
+            <div class="four--card">
+                <img src="./img/four-icon.png" alt="">
+                <h3>FREE REGISTRATION<br>NO HIDDEN FEES</h3>
+                <p>I'm a paragraph. Click here to add your own text and edit me. Let your users get to know you.</p>
+            </div>
+
+            <div class="four--card">
+                <img src="./img/four-icon.png" alt="">
+                <h3>FREE REGISTRATION<br>NO HIDDEN FEES</h3>
+                <p>I'm a paragraph. Click here to add your own text and edit me. Let your users get to know you.</p>
+            </div>
         </div>
 
-        <div class="card card-three">
-            <a href="#">
-                <img src="./img/card3.png" alt="">
-            </a>
+    </section>
+</div>
 
-            <h3>RANDALL CLOSE</h3>
-            <p class="card-price">$790,000</p>
-            <p class="card-rooms">6 Bedrooms</p>
-            <p class="card-paragraph">I'm a paragraph. Click here to add your own text and edit me. It’s easy. Just click “Edit Text” or double click me to add your own content and make changes to the font. I’m a great place for you to tell a story and let your users know a little more about you.</p>
-            <a href="#" class="card-read-more">read more</a>
+<section id="sectionFive" class="section-five">
+    <div class="parallax-slide">
+        <div class="parallax-clip">
+            <div class="fixed-parallax section-five--content" style="background-image: url(./img/bcg-pic.jpg);">
+
+                <div class="bcg--white-cover">
+
+                    <div class="container">
+
+                        <h2>WHAT OUR CLIENTS THINK</h2>
+
+                        <div class="three-quotes--wrapper">
+
+                            <div class="quote">
+                                <svg preserveAspectRatio="xMidYMid meet" data-bbox="8.8 9.7 81 81.3" xmlns="http://www.w3.org/2000/svg" viewBox="8.8 9.7 81 81.3" role="img">
+                                    <g>
+                                        <path d="M8.8 91V59.9c0-27.7 10-44 31.8-50.2v17c-10.4 4.5-14.5 13.8-14.2 30.8h14.2V91H8.8z"></path>
+                                        <path d="M58 91V59.9c0-27.7 10-44 31.8-50.2v17c-10.4 4.5-14.5 13.8-14.2 30.8h14.2V91H58z"></path>
+                                    </g>
+                                </svg>
+
+                                <p class="quote-paragraph">"I'm a testimonial. Click to edit me and add text that says something nice about you and your services"</p>
+
+                                <h3 class="quote-bottom">-Tina & James Heart</h3>
+                            </div>
+
+                            <div class="quote">
+                                <svg preserveAspectRatio="xMidYMid meet" data-bbox="8.8 9.7 81 81.3" xmlns="http://www.w3.org/2000/svg" viewBox="8.8 9.7 81 81.3" role="img">
+                                    <g>
+                                        <path d="M8.8 91V59.9c0-27.7 10-44 31.8-50.2v17c-10.4 4.5-14.5 13.8-14.2 30.8h14.2V91H8.8z"></path>
+                                        <path d="M58 91V59.9c0-27.7 10-44 31.8-50.2v17c-10.4 4.5-14.5 13.8-14.2 30.8h14.2V91H58z"></path>
+                                    </g>
+                                </svg>
+
+                                <p class="quote-paragraph">"I'm a testimonial. Click to edit me and add text that says something nice about you and your services"</p>
+
+                                <h3 class="quote-bottom">-Tina & James Heart</h3>
+                            </div>
+
+                            <div class="quote">
+                                <svg preserveAspectRatio="xMidYMid meet" data-bbox="8.8 9.7 81 81.3" xmlns="http://www.w3.org/2000/svg" viewBox="8.8 9.7 81 81.3" role="img">
+                                    <g>
+                                        <path d="M8.8 91V59.9c0-27.7 10-44 31.8-50.2v17c-10.4 4.5-14.5 13.8-14.2 30.8h14.2V91H8.8z"></path>
+                                        <path d="M58 91V59.9c0-27.7 10-44 31.8-50.2v17c-10.4 4.5-14.5 13.8-14.2 30.8h14.2V91H58z"></path>
+                                    </g>
+                                </svg>
+
+                                <p class="quote-paragraph">"I'm a testimonial. Click to edit me and add text that says something nice about you and your services"</p>
+
+                                <h3 class="quote-bottom">-Tina & James Heart</h3>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
         </div>
     </div>
 </section>
+
+<div class="container">
+    <section id="sectionSix" class="section-six">
+        <h2>CONTACT US</h2>
+
+        <div class="contact-top">
+            <div class="section-six--left">
+
+                <div class="left--address">
+                    <h3>ADDRESS</h3>
+                    <p>500 Terry Francois Street<br>San Francisco, CA 94158</p>
+                </div>
+
+                <div id="map"></div>
+            </div>
+
+            <div class="section-six--right">
+                <h3>ALTERNATIVELY YOU CAN FILL<br>IN THE FOLLOWING CONTACT<br>FORM:</h3>
+
+                <form action="" method="get" class="contact-form">
+                    <div class="form-item--container">
+                        <input type="text" name="name" id="name" placeholder="Name" required>
+                    </div>
+                    <div class="form-item--container">
+                        <input type="text" name="email" id="email" placeholder="Email" required>
+                    </div>
+                    <div class="form-item--container">
+                        <input type="text" name="subject" id="subject" placeholder="Subject" required>
+                    </div>
+                    <div class="form-item--container">
+                        <textarea type="email" name="message" id="message" placeholder="Message" required></textarea>
+                    </div>
+                    <div class="form-item--container">
+                        <input class="submit-btn" type="submit" value="Submit">
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div class="contact-bottom">
+            <h3>TO SPEAK WITH AN AGENT, PLEASE CALL OR EMAIL US:</h3>
+
+            <p>Email: info@mysite.com<br>Tel: 123-456-7890<br>Fax: 123-456-7890</p>
+        </div>
+
+
+    </section>
+</div>
+
+<footer>
+
+</footer>
 
 </body>
 </html>
