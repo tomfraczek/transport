@@ -39,11 +39,11 @@ $large-desktop-breakpoint: 1400px;
 
 @mixin container {
   margin: 0 auto;
-  padding: 0 15px;
-  width: 100%;
+  padding: 0;
   position: relative;
   @include tablet {
     width: $tablet-width;
+    padding: 0 15px;
   }
   @include laptop {
     width: $laptop-width;

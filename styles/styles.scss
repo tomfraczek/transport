@@ -60,13 +60,12 @@ nav{
     justify-content: center;
 
     position: absolute;
+    left: calc(50% - 105.25px);
     z-index: 10;
     background: $colorMain;
     padding: 0 20px;
     color: #fff;
     top: 0;
-    left: 0;
-    right: 0;
 
 
     @include tablet{
@@ -110,11 +109,8 @@ nav{
 }
 
 .slideshow-items{
-  display: none;
+  display: block;
 
-  @include tablet{
-    display: block;
-  }
 }
 
 .slideshaw-fix--bottom,

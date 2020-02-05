@@ -140,9 +140,8 @@ if (array_key_exists('to', $_POST)) {
 
     </div>
 
-    <img class="mobile-top-img" src="img/slide1.png" alt="">
 
-    <div class="container">
+    <div class="container mobile-container">
         <div class="slideshaw-fix--bottom">
             <div class="slideshow--bottom__top">
                 <h2>STUNNING 6 BED HOUSE IN THE HEART OF THE CITY</h2>
@@ -200,183 +199,183 @@ if (array_key_exists('to', $_POST)) {
         </div>
     </section>
 </div>
-
-<section id="sectionThree" class="section-three">
-    <h2>LATEST PROPERTIES PROPERTIES</h2>
-
-    <div class="section-three--top section-three--content">
-        <img src="./img/envelope.jpg" alt="">
-
-        <div class="three--top__right card">
-            <h3 class="header-small">QUEENS WAY</h3>
-            <p class="card-rooms">3 Bedrooms</p>
-            <p class="card-paragraph">I'm a paragraph. Click here to add your own text and edit me. It’s easy. Just click “Edit Text” or double click me to add your own content and make changes to the font. I’m a great place for you to tell a story and let your users know a little more about you.</p>
-            <p class="card-price">$450,000</p>
-        </div>
-    </div>
-
-    <div class="section-three--bottom section-three--content">
-        <div class="three--bottom__left card">
-            <h3 class="header-small">QUEENS WAY</h3>
-            <p class="card-rooms">3 Bedrooms</p>
-            <p class="card-paragraph">I'm a paragraph. Click here to add your own text and edit me. It’s easy. Just click “Edit Text” or double click me to add your own content and make changes to the font. I’m a great place for you to tell a story and let your users know a little more about you.</p>
-            <p class="card-price">$450,000</p>
-        </div>
-        <img src="./img/forest.jpg" alt="">
-    </div>
-
-</section>
-
-<div class="container">
-    <section id="sectionFour" class="section-four">
-        <h2>REALTORS YOU CAN TRUST</h2>
-
-        <div class="four--cards__wrapper">
-            <div class="four--card">
-                <img src="./img/four-icon.png" alt="">
-                <h3>FREE REGISTRATION<br>NO HIDDEN FEES</h3>
-                <p>I'm a paragraph. Click here to add your own text and edit me. Let your users get to know you.</p>
-            </div>
-
-            <div class="four--card">
-                <img src="./img/four-icon.png" alt="">
-                <h3>FREE REGISTRATION<br>NO HIDDEN FEES</h3>
-                <p>I'm a paragraph. Click here to add your own text and edit me. Let your users get to know you.</p>
-            </div>
-
-            <div class="four--card">
-                <img src="./img/four-icon.png" alt="">
-                <h3>FREE REGISTRATION<br>NO HIDDEN FEES</h3>
-                <p>I'm a paragraph. Click here to add your own text and edit me. Let your users get to know you.</p>
-            </div>
-        </div>
-
-    </section>
-</div>
-
-<section id="sectionFive" class="section-five">
-    <div class="parallax-slide">
-        <div class="parallax-clip">
-            <div class="fixed-parallax section-five--content" style="background-image: url(./img/bcg-pic.jpg);">
-
-                <div class="bcg--white-cover">
-
-                    <div class="container">
-
-                        <h2>WHAT OUR CLIENTS THINK</h2>
-
-                        <div class="three-quotes--wrapper">
-
-                            <div class="quote">
-                                <svg preserveAspectRatio="xMidYMid meet" data-bbox="8.8 9.7 81 81.3" xmlns="http://www.w3.org/2000/svg" viewBox="8.8 9.7 81 81.3" role="img">
-                                    <g>
-                                        <path d="M8.8 91V59.9c0-27.7 10-44 31.8-50.2v17c-10.4 4.5-14.5 13.8-14.2 30.8h14.2V91H8.8z"></path>
-                                        <path d="M58 91V59.9c0-27.7 10-44 31.8-50.2v17c-10.4 4.5-14.5 13.8-14.2 30.8h14.2V91H58z"></path>
-                                    </g>
-                                </svg>
-
-                                <p class="quote-paragraph">"I'm a testimonial. Click to edit me and add text that says something nice about you and your services"</p>
-
-                                <h3 class="quote-bottom">-Tina & James Heart</h3>
-                            </div>
-
-                            <div class="quote">
-                                <svg preserveAspectRatio="xMidYMid meet" data-bbox="8.8 9.7 81 81.3" xmlns="http://www.w3.org/2000/svg" viewBox="8.8 9.7 81 81.3" role="img">
-                                    <g>
-                                        <path d="M8.8 91V59.9c0-27.7 10-44 31.8-50.2v17c-10.4 4.5-14.5 13.8-14.2 30.8h14.2V91H8.8z"></path>
-                                        <path d="M58 91V59.9c0-27.7 10-44 31.8-50.2v17c-10.4 4.5-14.5 13.8-14.2 30.8h14.2V91H58z"></path>
-                                    </g>
-                                </svg>
-
-                                <p class="quote-paragraph">"I'm a testimonial. Click to edit me and add text that says something nice about you and your services"</p>
-
-                                <h3 class="quote-bottom">-Tina & James Heart</h3>
-                            </div>
-
-                            <div class="quote">
-                                <svg preserveAspectRatio="xMidYMid meet" data-bbox="8.8 9.7 81 81.3" xmlns="http://www.w3.org/2000/svg" viewBox="8.8 9.7 81 81.3" role="img">
-                                    <g>
-                                        <path d="M8.8 91V59.9c0-27.7 10-44 31.8-50.2v17c-10.4 4.5-14.5 13.8-14.2 30.8h14.2V91H8.8z"></path>
-                                        <path d="M58 91V59.9c0-27.7 10-44 31.8-50.2v17c-10.4 4.5-14.5 13.8-14.2 30.8h14.2V91H58z"></path>
-                                    </g>
-                                </svg>
-
-                                <p class="quote-paragraph">"I'm a testimonial. Click to edit me and add text that says something nice about you and your services"</p>
-
-                                <h3 class="quote-bottom">-Tina & James Heart</h3>
-                            </div>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </div>
-        </div>
-    </div>
-</section>
-
-<div class="container">
-    <section id="sectionSix" class="section-six">
-        <h2>CONTACT US</h2>
-
-        <div class="contact-top">
-            <div class="section-six--left">
-
-                <div class="left--address">
-                    <h3>ADDRESS</h3>
-                    <p>500 Terry Francois Street<br>San Francisco, CA 94158</p>
-                </div>
-
-                <div id="map"></div>
-            </div>
-
-            <div class="section-six--right">
-                <h3>ALTERNATIVELY YOU CAN FILL<br>IN THE FOLLOWING CONTACT<br>FORM:</h3>
-
-                <?php if (empty($msg)) { ?>
-                <form name="bottomOfPage" class="bottom-contact-form" method="post">
-                    <input placeholder="Name" type="text" name="name" id="name" maxlength="255">
-                    <input placeholder="Email" type="email" name="email" id="email" maxlength="255">
-                    <input placeholder="Subject" type="text" name="subject" id="subject" maxlength="255">
-                    <textarea cols="30" rows="8" name="query" id="query" placeholder="Your question"></textarea><br>
-                    <input class="bottom-contact-form--submit" type="submit" value="Submit">
-                </form>
-
-                <?php } else {
-                    echo $msg;
-                } ?>
-
-            </div>
-        </div>
-
-        <div class="contact-bottom">
-            <h3>TO SPEAK WITH AN AGENT, PLEASE CALL OR EMAIL US:</h3>
-
-            <p>Email: info@mysite.com<br>Tel: 123-456-7890<br>Fax: 123-456-7890</p>
-        </div>
-
-
-    </section>
-</div>
-
-<footer>
-    <div class="container">
-        <nav>
-            <div class="nav-logo footer-logo">
-                <img src="./img/truck.svg" alt="">
-                <span>Smorawsky Empire</span>
-            </div>
-            <ul class="footer-nav">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Link 1</a></li>
-                <li><a href="#">Link 2</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
-        </nav>
-    </div>
-</footer>
+<!---->
+<!--<section id="sectionThree" class="section-three">-->
+<!--    <h2>LATEST PROPERTIES PROPERTIES</h2>-->
+<!---->
+<!--    <div class="section-three--top section-three--content">-->
+<!--        <img src="./img/envelope.jpg" alt="">-->
+<!---->
+<!--        <div class="three--top__right card">-->
+<!--            <h3 class="header-small">QUEENS WAY</h3>-->
+<!--            <p class="card-rooms">3 Bedrooms</p>-->
+<!--            <p class="card-paragraph">I'm a paragraph. Click here to add your own text and edit me. It’s easy. Just click “Edit Text” or double click me to add your own content and make changes to the font. I’m a great place for you to tell a story and let your users know a little more about you.</p>-->
+<!--            <p class="card-price">$450,000</p>-->
+<!--        </div>-->
+<!--    </div>-->
+<!---->
+<!--    <div class="section-three--bottom section-three--content">-->
+<!--        <div class="three--bottom__left card">-->
+<!--            <h3 class="header-small">QUEENS WAY</h3>-->
+<!--            <p class="card-rooms">3 Bedrooms</p>-->
+<!--            <p class="card-paragraph">I'm a paragraph. Click here to add your own text and edit me. It’s easy. Just click “Edit Text” or double click me to add your own content and make changes to the font. I’m a great place for you to tell a story and let your users know a little more about you.</p>-->
+<!--            <p class="card-price">$450,000</p>-->
+<!--        </div>-->
+<!--        <img src="./img/forest.jpg" alt="">-->
+<!--    </div>-->
+<!---->
+<!--</section>-->
+<!---->
+<!--<div class="container">-->
+<!--    <section id="sectionFour" class="section-four">-->
+<!--        <h2>REALTORS YOU CAN TRUST</h2>-->
+<!---->
+<!--        <div class="four--cards__wrapper">-->
+<!--            <div class="four--card">-->
+<!--                <img src="./img/four-icon.png" alt="">-->
+<!--                <h3>FREE REGISTRATION<br>NO HIDDEN FEES</h3>-->
+<!--                <p>I'm a paragraph. Click here to add your own text and edit me. Let your users get to know you.</p>-->
+<!--            </div>-->
+<!---->
+<!--            <div class="four--card">-->
+<!--                <img src="./img/four-icon.png" alt="">-->
+<!--                <h3>FREE REGISTRATION<br>NO HIDDEN FEES</h3>-->
+<!--                <p>I'm a paragraph. Click here to add your own text and edit me. Let your users get to know you.</p>-->
+<!--            </div>-->
+<!---->
+<!--            <div class="four--card">-->
+<!--                <img src="./img/four-icon.png" alt="">-->
+<!--                <h3>FREE REGISTRATION<br>NO HIDDEN FEES</h3>-->
+<!--                <p>I'm a paragraph. Click here to add your own text and edit me. Let your users get to know you.</p>-->
+<!--            </div>-->
+<!--        </div>-->
+<!---->
+<!--    </section>-->
+<!--</div>-->
+<!---->
+<!--<section id="sectionFive" class="section-five">-->
+<!--    <div class="parallax-slide">-->
+<!--        <div class="parallax-clip">-->
+<!--            <div class="fixed-parallax section-five--content" style="background-image: url(./img/bcg-pic.jpg);">-->
+<!---->
+<!--                <div class="bcg--white-cover">-->
+<!---->
+<!--                    <div class="container">-->
+<!---->
+<!--                        <h2>WHAT OUR CLIENTS THINK</h2>-->
+<!---->
+<!--                        <div class="three-quotes--wrapper">-->
+<!---->
+<!--                            <div class="quote">-->
+<!--                                <svg preserveAspectRatio="xMidYMid meet" data-bbox="8.8 9.7 81 81.3" xmlns="http://www.w3.org/2000/svg" viewBox="8.8 9.7 81 81.3" role="img">-->
+<!--                                    <g>-->
+<!--                                        <path d="M8.8 91V59.9c0-27.7 10-44 31.8-50.2v17c-10.4 4.5-14.5 13.8-14.2 30.8h14.2V91H8.8z"></path>-->
+<!--                                        <path d="M58 91V59.9c0-27.7 10-44 31.8-50.2v17c-10.4 4.5-14.5 13.8-14.2 30.8h14.2V91H58z"></path>-->
+<!--                                    </g>-->
+<!--                                </svg>-->
+<!---->
+<!--                                <p class="quote-paragraph">"I'm a testimonial. Click to edit me and add text that says something nice about you and your services"</p>-->
+<!---->
+<!--                                <h3 class="quote-bottom">-Tina & James Heart</h3>-->
+<!--                            </div>-->
+<!---->
+<!--                            <div class="quote">-->
+<!--                                <svg preserveAspectRatio="xMidYMid meet" data-bbox="8.8 9.7 81 81.3" xmlns="http://www.w3.org/2000/svg" viewBox="8.8 9.7 81 81.3" role="img">-->
+<!--                                    <g>-->
+<!--                                        <path d="M8.8 91V59.9c0-27.7 10-44 31.8-50.2v17c-10.4 4.5-14.5 13.8-14.2 30.8h14.2V91H8.8z"></path>-->
+<!--                                        <path d="M58 91V59.9c0-27.7 10-44 31.8-50.2v17c-10.4 4.5-14.5 13.8-14.2 30.8h14.2V91H58z"></path>-->
+<!--                                    </g>-->
+<!--                                </svg>-->
+<!---->
+<!--                                <p class="quote-paragraph">"I'm a testimonial. Click to edit me and add text that says something nice about you and your services"</p>-->
+<!---->
+<!--                                <h3 class="quote-bottom">-Tina & James Heart</h3>-->
+<!--                            </div>-->
+<!---->
+<!--                            <div class="quote">-->
+<!--                                <svg preserveAspectRatio="xMidYMid meet" data-bbox="8.8 9.7 81 81.3" xmlns="http://www.w3.org/2000/svg" viewBox="8.8 9.7 81 81.3" role="img">-->
+<!--                                    <g>-->
+<!--                                        <path d="M8.8 91V59.9c0-27.7 10-44 31.8-50.2v17c-10.4 4.5-14.5 13.8-14.2 30.8h14.2V91H8.8z"></path>-->
+<!--                                        <path d="M58 91V59.9c0-27.7 10-44 31.8-50.2v17c-10.4 4.5-14.5 13.8-14.2 30.8h14.2V91H58z"></path>-->
+<!--                                    </g>-->
+<!--                                </svg>-->
+<!---->
+<!--                                <p class="quote-paragraph">"I'm a testimonial. Click to edit me and add text that says something nice about you and your services"</p>-->
+<!---->
+<!--                                <h3 class="quote-bottom">-Tina & James Heart</h3>-->
+<!--                            </div>-->
+<!---->
+<!--                        </div>-->
+<!---->
+<!--                    </div>-->
+<!---->
+<!--                </div>-->
+<!---->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</section>-->
+<!---->
+<!--<div class="container">-->
+<!--    <section id="sectionSix" class="section-six">-->
+<!--        <h2>CONTACT US</h2>-->
+<!---->
+<!--        <div class="contact-top">-->
+<!--            <div class="section-six--left">-->
+<!---->
+<!--                <div class="left--address">-->
+<!--                    <h3>ADDRESS</h3>-->
+<!--                    <p>500 Terry Francois Street<br>San Francisco, CA 94158</p>-->
+<!--                </div>-->
+<!---->
+<!--                <div id="map"></div>-->
+<!--            </div>-->
+<!---->
+<!--            <div class="section-six--right">-->
+<!--                <h3>ALTERNATIVELY YOU CAN FILL<br>IN THE FOLLOWING CONTACT<br>FORM:</h3>-->
+<!---->
+<!--                --><?php //if (empty($msg)) { ?>
+<!--                <form name="bottomOfPage" class="bottom-contact-form" method="post">-->
+<!--                    <input placeholder="Name" type="text" name="name" id="name" maxlength="255">-->
+<!--                    <input placeholder="Email" type="email" name="email" id="email" maxlength="255">-->
+<!--                    <input placeholder="Subject" type="text" name="subject" id="subject" maxlength="255">-->
+<!--                    <textarea cols="30" rows="8" name="query" id="query" placeholder="Your question"></textarea><br>-->
+<!--                    <input class="bottom-contact-form--submit" type="submit" value="Submit">-->
+<!--                </form>-->
+<!---->
+<!--                --><?php //} else {
+//                    echo $msg;
+//                } ?>
+<!---->
+<!--            </div>-->
+<!--        </div>-->
+<!---->
+<!--        <div class="contact-bottom">-->
+<!--            <h3>TO SPEAK WITH AN AGENT, PLEASE CALL OR EMAIL US:</h3>-->
+<!---->
+<!--            <p>Email: info@mysite.com<br>Tel: 123-456-7890<br>Fax: 123-456-7890</p>-->
+<!--        </div>-->
+<!---->
+<!---->
+<!--    </section>-->
+<!--</div>-->
+<!---->
+<!--<footer>-->
+<!--    <div class="container">-->
+<!--        <nav>-->
+<!--            <div class="nav-logo footer-logo">-->
+<!--                <img src="./img/truck.svg" alt="">-->
+<!--                <span>Smorawsky Empire</span>-->
+<!--            </div>-->
+<!--            <ul class="footer-nav">-->
+<!--                <li><a href="#">Home</a></li>-->
+<!--                <li><a href="#">Link 1</a></li>-->
+<!--                <li><a href="#">Link 2</a></li>-->
+<!--                <li><a href="#">Contact</a></li>-->
+<!--            </ul>-->
+<!--        </nav>-->
+<!--    </div>-->
+<!--</footer>-->
 
 </body>
 </html>
