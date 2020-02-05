@@ -1,3 +1,78 @@
+<?php
+/**
+ * PHPMailer simple contact form example.
+ * If you want to accept and send uploads in your form, look at the send_file_upload example.
+ */
+
+//Import the PHPMailer class into the global namespace
+use PHPMailer\PHPMailer\PHPMailer;
+
+require './vendor/autoload.php';
+
+if (array_key_exists('to', $_POST)) {
+    $err = false;
+    $msg = '';
+    $email = '';
+    //Apply some basic validation and filtering to the subject
+    if (array_key_exists('subject', $_POST)) {
+        $subject = substr(strip_tags($_POST['subject']), 0, 255);
+    } else {
+        $subject = 'No subject given';
+    }
+    //Apply some basic validation and filtering to the query
+    if (array_key_exists('query', $_POST)) {
+        //Limit length and strip HTML tags
+        $query = substr(strip_tags($_POST['query']), 0, 16384);
+    } else {
+        $query = '';
+        $msg = 'No query provided!';
+        $err = true;
+    }
+    //Apply some basic validation and filtering to the name
+    if (array_key_exists('name', $_POST)) {
+        //Limit length and strip HTML tags
+        $name = substr(strip_tags($_POST['name']), 0, 255);
+    } else {
+        $name = '';
+    }
+    //Validate to address
+    //Never allow arbitrary input for the 'to' address as it will turn your form into a spam gateway!
+    //Substitute appropriate addresses from your own domain, or simply use a single, fixed address
+//    if (array_key_exists('to', $_POST) && in_array($_POST['to'], ['sales', 'support', 'accounts'], true)) {
+//        $to = $_POST['to'] . '@example.com';
+//    } else {
+//        $to = 'tomaszfr90@gmail.com';
+//    }
+    $to = 'tomaszfr90@gmail.com';
+    //Make sure the address they provided is valid before trying to use it
+    if (array_key_exists('email', $_POST) && PHPMailer::validateAddress($_POST['email'])) {
+        $email = $_POST['email'];
+    } else {
+        $msg .= 'Error: invalid email address provided';
+        $err = true;
+    }
+    if (!$err) {
+        $mail = new PHPMailer;
+//        $mail->isSMTP();
+$mail->Host = 'localhost';
+$mail->Port = 25;
+$mail->CharSet = PHPMailer::CHARSET_UTF8;
+//It's important not to use the submitter's address as the from address as it's forgery,
+//which will cause your messages to fail SPF checks.
+//Use an address in your own domain as the from address, put the submitter's address in a reply-to
+$mail->setFrom('contact@example.com', (empty($name) ? 'Contact form' : $name));
+$mail->addAddress($to);
+$mail->addReplyTo($email, $name);
+$mail->Subject = 'Contact form: ' . $subject;
+$mail->Body = "Contact form submission\n\n" . $query;
+if (!$mail->send()) {
+$msg .= 'Mailer Error: '. $mail->ErrorInfo;
+} else {
+$msg .= 'Message sent!';
+}
+}
+} ?>
+
 <!DOCTYPE html>
 <html class="no-js" lang="">
 <head>
@@ -52,13 +127,13 @@
 
         <ul class="uk-slideshow-items slideshow-items">
             <li>
-                <img src="img/slide1.png" alt="" uk-cover>
+                <img src="img/slide1.jpg" alt="" uk-cover>
             </li>
             <li>
-                <img src="img/slide2.png" alt="" uk-cover>
+                <img src="img/slide2.jpg" alt="" uk-cover>
             </li>
             <li>
-                <img src="img/slide3.png" alt="" uk-cover>
+                <img src="img/slide3.jpg" alt="" uk-cover>
             </li>
         </ul>
 
@@ -88,7 +163,7 @@
         <div class="three-cards">
             <div class="card card-one">
                 <a href="#">
-                    <img src="./img/card1.png" alt="">
+                    <img src="./img/montains.jpg" alt="">
                 </a>
 
                 <h3 class="header-small">DOWN AVENUE</h3>
@@ -100,7 +175,7 @@
 
             <div class="card card-two">
                 <a href="#">
-                    <img src="./img/card1.png" alt="">
+                    <img src="./img/column2.jpg" alt="">
                 </a>
 
                 <h3 class="header-small">QUEENS WAY</h3>
@@ -112,7 +187,7 @@
 
             <div class="card card-three">
                 <a href="#">
-                    <img src="./img/card1.png" alt="">
+                    <img src="./img/column3.jpg" alt="">
                 </a>
 
                 <h3 class="header-small">RANDALL CLOSE</h3>
@@ -129,7 +204,7 @@
     <h2>LATEST PROPERTIES PROPERTIES</h2>
 
     <div class="section-three--top section-three--content">
-        <img src="./img/section3.png" alt="">
+        <img src="./img/envelope.jpg" alt="">
 
         <div class="three--top__right card">
             <h3 class="header-small">QUEENS WAY</h3>
@@ -146,7 +221,7 @@
             <p class="card-paragraph">I'm a paragraph. Click here to add your own text and edit me. It’s easy. Just click “Edit Text” or double click me to add your own content and make changes to the font. I’m a great place for you to tell a story and let your users know a little more about you.</p>
             <p class="card-price">$450,000</p>
         </div>
-        <img src="./img/section3.png" alt="">
+        <img src="./img/forest.jpg" alt="">
     </div>
 
 </section>
@@ -259,23 +334,26 @@
             <div class="section-six--right">
                 <h3>ALTERNATIVELY YOU CAN FILL<br>IN THE FOLLOWING CONTACT<br>FORM:</h3>
 
-                <form action="" method="get" class="contact-form">
-                    <div class="form-item--container">
-                        <input type="text" name="name" id="name" placeholder="Name" required>
-                    </div>
-                    <div class="form-item--container">
-                        <input type="text" name="email" id="email" placeholder="Email" required>
-                    </div>
-                    <div class="form-item--container">
-                        <input type="text" name="subject" id="subject" placeholder="Subject" required>
-                    </div>
-                    <div class="form-item--container">
-                        <textarea type="email" name="message" id="message" placeholder="Message" required></textarea>
-                    </div>
-                    <div class="form-item--container">
-                        <input class="submit-btn" type="submit" value="Submit">
-                    </div>
+                <?php if (empty($msg)) { ?>
+                <form method="post">
+                    <label for="to">Send to:</label>
+                    <select name="to" id="to">
+                        <option value="sales">Sales</option>
+                        <option value="support" selected="selected">Support</option>
+                        <option value="accounts">Accounts</option>
+                    </select><br>
+                    <label for="subject">Subject: <input type="text" name="subject" id="subject" maxlength="255"></label><br>
+                    <label for="name">Your name: <input type="text" name="name" id="name" maxlength="255"></label><br>
+                    <label for="email">Your email address: <input type="email" name="email" id="email" maxlength="255"></label><br>
+                    <label for="query">Your question:</label><br>
+                    <textarea cols="30" rows="8" name="query" id="query" placeholder="Your question"></textarea><br>
+                    <input type="submit" value="Submit">
                 </form>
+
+                <?php } else {
+                    echo $msg;
+                } ?>
+
             </div>
         </div>
 

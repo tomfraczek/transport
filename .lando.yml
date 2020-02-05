@@ -1,0 +1,4 @@
+name: smorawski-transport
+recipe: lamp
+config:
+  webroot: ./
