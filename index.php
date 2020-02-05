@@ -53,24 +53,25 @@ if (array_key_exists('to', $_POST)) {
     }
     if (!$err) {
         $mail = new PHPMailer;
-//        $mail->isSMTP();
-$mail->Host = 'localhost';
-$mail->Port = 25;
-$mail->CharSet = PHPMailer::CHARSET_UTF8;
-//It's important not to use the submitter's address as the from address as it's forgery,
-//which will cause your messages to fail SPF checks.
-//Use an address in your own domain as the from address, put the submitter's address in a reply-to
-$mail->setFrom('contact@example.com', (empty($name) ? 'Contact form' : $name));
-$mail->addAddress($to);
-$mail->addReplyTo($email, $name);
-$mail->Subject = 'Contact form: ' . $subject;
-$mail->Body = "Contact form submission\n\n" . $query;
-if (!$mail->send()) {
-$msg .= 'Mailer Error: '. $mail->ErrorInfo;
-} else {
-$msg .= 'Message sent!';
-}
-}
+    //        $mail->isSMTP();
+    $mail->Host = 'localhost';
+    $mail->Port = 25;
+    $mail->CharSet = PHPMailer::CHARSET_UTF8;
+    //It's important not to use the submitter's address as the from address as it's forgery,
+    //which will cause your messages to fail SPF checks.
+    //Use an address in your own domain as the from address, put the submitter's address in a reply-to
+    $mail->setFrom('contact@example.com', (empty($name) ? 'Contact form' : $name));
+    $mail->addAddress($to);
+    $mail->addReplyTo($email, $name);
+    $mail->Subject = 'Contact form: ' . $subject;
+    $mail->Body = "Contact form submission\n\n" . $query;
+        if (!$mail->send()) {
+        $msg .= 'Mailer Error: '. $mail->ErrorInfo;
+        } else {
+            header('Location: script.php#bottomOfPage');
+            $msg .= 'Message sent!';
+        }
+    }
 } ?>
 
 <!DOCTYPE html>
@@ -335,19 +336,12 @@ $msg .= 'Message sent!';
                 <h3>ALTERNATIVELY YOU CAN FILL<br>IN THE FOLLOWING CONTACT<br>FORM:</h3>
 
                 <?php if (empty($msg)) { ?>
-                <form method="post">
-                    <label for="to">Send to:</label>
-                    <select name="to" id="to">
-                        <option value="sales">Sales</option>
-                        <option value="support" selected="selected">Support</option>
-                        <option value="accounts">Accounts</option>
-                    </select><br>
-                    <label for="subject">Subject: <input type="text" name="subject" id="subject" maxlength="255"></label><br>
-                    <label for="name">Your name: <input type="text" name="name" id="name" maxlength="255"></label><br>
-                    <label for="email">Your email address: <input type="email" name="email" id="email" maxlength="255"></label><br>
-                    <label for="query">Your question:</label><br>
+                <form name="bottomOfPage" class="bottom-contact-form" method="post">
+                    <input placeholder="Name" type="text" name="name" id="name" maxlength="255">
+                    <input placeholder="Email" type="email" name="email" id="email" maxlength="255">
+                    <input placeholder="Subject" type="text" name="subject" id="subject" maxlength="255">
                     <textarea cols="30" rows="8" name="query" id="query" placeholder="Your question"></textarea><br>
-                    <input type="submit" value="Submit">
+                    <input class="bottom-contact-form--submit" type="submit" value="Submit">
                 </form>
 
                 <?php } else {
@@ -368,7 +362,20 @@ $msg .= 'Message sent!';
 </div>
 
 <footer>
-
+    <div class="container">
+        <nav>
+            <div class="nav-logo footer-logo">
+                <img src="./img/truck.svg" alt="">
+                <span>Smorawsky Empire</span>
+            </div>
+            <ul class="footer-nav">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Link 1</a></li>
+                <li><a href="#">Link 2</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
 </footer>
 
 </body>
